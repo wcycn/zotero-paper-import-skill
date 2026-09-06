@@ -1,0 +1,9 @@
+{
+  "basePath": "/absolute/path/to/Papers",
+  "destinationRoot": "/absolute/path/to/Papers/Research",
+  "collection": {
+    "name": "Research Papers"
+  },
+  "includeSupportingInformation": true,
+  "zoteroApi": "http://127.0.0.1:23119/api"
+}

@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+coverage/
+*.log
+.env
+.env.*
+config.json
+config.local.json
+*.local.json
+manifests/
+downloads/
+*.pdf
+*.caj
+*.zip
+*.tar
+*.tar.gz

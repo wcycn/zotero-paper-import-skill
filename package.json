@@ -1,0 +1,14 @@
+{
+  "name": "zotero-paper-import-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A reusable skill and local-API helper for verified linked-file Zotero imports.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Zotero Paper Import"
+  short_description: "Verify, download, and link papers into Zotero"
+  default_prompt: "Use $zotero-paper-import to verify, lawfully retrieve, and add this paper and its supporting files to Zotero."
+policy:
+  allow_implicit_invocation: true
