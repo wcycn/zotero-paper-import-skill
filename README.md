@@ -61,6 +61,43 @@ This project is not a Zotero extension, a paywall bypasser, or a cloud-storage p
 
 ## Installation
 
+### Install automatically with Codex
+
+Copy the following prompt into Codex. It asks the agent to install the skill for the current user and verify the result instead of merely printing shell commands.
+
+```text
+请帮我自动安装下面这个 Codex Skill：
+
+https://github.com/wcycn/zotero-paper-import-skill
+
+具体要求：
+
+1. 不要只提供安装命令，请直接完成安装和验证。
+2. 先阅读仓库中的 README.md 和完整的 zotero-paper-import/SKILL.md。
+3. 如果当前环境提供 $skill-installer，优先使用它；否则将仓库下载到临时目录后手动安装。
+4. 将仓库内层的 zotero-paper-import 目录安装到当前用户的 Codex Skills 目录：
+   - 优先使用 $CODEX_HOME/skills/zotero-paper-import；
+   - 如果未设置 CODEX_HOME，使用 ~/.codex/skills/zotero-paper-import；
+   - 注意不要错误地多嵌套一层仓库目录。
+5. 如果已经存在旧版本，先检查差异并安全更新；不要删除或覆盖用户已有的私人配置，尤其是 ~/.config/zotero-paper-import/config.json。
+6. 检查运行条件，包括 Git、Node.js 版本是否满足要求（Node.js 需要 18 或更高版本）。如需 sudo 或系统级安装，先征得我的允许。
+7. 安装完成后必须执行验证：
+   - 确认 SKILL.md、config.example.json 和导入脚本均已安装；
+   - 检查 SKILL.md 的名称和 YAML frontmatter；
+   - 在下载的仓库根目录运行 npm test；
+   - 确认全部测试通过；
+   - 确认安装目录中没有写入用户名、Token、IP 地址或其他私人配置。
+8. 不要为了测试而向 Zotero 导入真实论文或修改现有文库。
+9. 最后向我汇报实际安装路径、Git commit 或版本、Node.js 版本、测试结果、是否需要重新打开 Codex，以及一条调用示例。
+10. 如果当前任务无法立即刷新 Skill 列表，请明确说明需要重新打开 Codex 或新建任务，不要把它误判为安装失败。
+
+除非遇到权限、缺少必要软件或必须由我选择的配置，否则请自行完成整个过程。
+```
+
+After installation, open a new Codex task if the skill does not appear immediately.
+
+### Install manually
+
 Clone the repository:
 
 ```bash
